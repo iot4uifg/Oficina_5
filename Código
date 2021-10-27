@@ -11,7 +11,7 @@
 #include <ESP8266WiFi.h>  // Inclui biblioteca WiFi
 #include <Adafruit_Sensor.h> // Inclui bibliotecas do DHT
 #include <DHT.h>
-#include <PubSubClient.h>
+#include <PubSubClient.h> // Inclue biblioteca de comunicação MQTT
 
 
 // Configurações DHT
