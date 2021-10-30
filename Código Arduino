@@ -132,13 +132,13 @@ void recebePacote(char* topic, byte* payload, unsigned int length)
     Serial.println (tpc);
     
     //Obtem a string do payload recebido
-    for(int i = 0; i < 4; i++) 
+    for(int i = 0; i < length; i++) 
     {
        char c = (char)payload[i];
        msg += c;
     }
     //Função executada a partir da mesnagem recebida (no caso ascende o apaga o LED)
     if (msg == "true") digitalWrite(LED, HIGH);
-    if (msg == "fals") digitalWrite(LED, LOW);
+    if (msg == "false") digitalWrite(LED, LOW);
     Serial.println("Executado!");
 }
