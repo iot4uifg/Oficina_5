@@ -126,12 +126,12 @@ void conectaMQTT() {
 
 void recebePacote(char* topic, byte* payload, unsigned int length) 
 {
-    String tpc = topic;
+    String tpc = topic; //salva o nome do tópico na variável tpc
     String msg;
     Serial.print ("Mensagem recebida no tópico: ");
     Serial.println (tpc);
     
-    //Obtem a string do payload recebido
+    //Obtem a mensagem do payload recebido
     for(int i = 0; i < length; i++) 
     {
        char c = (char)payload[i];
